@@ -33,7 +33,7 @@ export function getHeader(currentPageId = '') {
           </ul>
         </div>
         <a href="index.html" class="btn btn-ghost px-3 py-2">
-          <img src="/images/Logo.png" alt="BF Fencing" class="h-14 md:h-[72px] w-auto" />
+          <img src="${import.meta.env.BASE_URL}images/Logo.png" alt="BF Fencing" class="h-14 md:h-[72px] w-auto" />
         </a>
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -55,7 +55,7 @@ export function getFooter() {
     <footer class="footer footer-center bg-neutral-100 text-[#0e121d] p-12 md:p-16">
       <aside>
         <a href="index.html" class="block mb-4">
-          <img src="/images/Logo.png" alt="BF Fencing" class="h-20 md:h-24 w-auto mx-auto" />
+          <img src="${import.meta.env.BASE_URL}images/Logo.png" alt="BF Fencing" class="h-20 md:h-24 w-auto mx-auto" />
         </a>
         <p class="max-w-xl mx-auto text-center mb-6 text-base md:text-lg">
           At BF Fencing, we deliver strong, stylish, and affordable Colorbond and Colourbond fencing solutions across South Australia.

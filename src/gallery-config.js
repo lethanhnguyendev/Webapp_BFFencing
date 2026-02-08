@@ -103,14 +103,16 @@ export const GALLERY_CATEGORIES = [
   }
 ]
 
+const base = import.meta.env.BASE_URL
+
 export function getImageUrl(folder, filename) {
   const encodedFolder = encodeURIComponent(folder)
   const encodedFilename = encodeURIComponent(filename)
-  return `/images/gallery/${encodedFolder}/${encodedFilename}`
+  return `${base}images/gallery/${encodedFolder}/${encodedFilename}`
 }
 
 export function getVideoUrl(folder, filename) {
   const encodedFolder = encodeURIComponent(folder)
   const encodedFilename = encodeURIComponent(filename)
-  return `/images/gallery/${encodedFolder}/${encodedFilename}`
+  return `${base}images/gallery/${encodedFolder}/${encodedFilename}`
 }
