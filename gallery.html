@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="https://bffencing.com.au/wp-content/uploads/2025/10/cropped-image__1_-removebg-preview-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - BF Fencing</title>
+</head>
+<body data-theme="light" data-page="gallery" class="min-h-screen flex flex-col bg-white">
+  <div id="site-header"></div>
+
+  <main class="flex-1">
+    <!-- Page header -->
+    <section class="relative min-h-[280px] py-20 overflow-hidden flex items-center justify-center">
+      <div class="absolute inset-0">
+        <img src="/images/hero/slide2.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div class="relative container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Project Gallery</h1>
+        <p class="text-lg text-white/90 max-w-2xl mx-auto">Browse our quality fencing projects by category</p>
+      </div>
+    </section>
+
+    <!-- Breadcrumb (hidden initially) -->
+    <div id="gallery-breadcrumb" class="hidden container mx-auto px-4 py-4 text-sm opacity-70"></div>
+
+    <!-- Categories grid -->
+    <section id="gallery-categories" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6">Browse by category</h2>
+        <div id="gallery-categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Content grid (images or videos, hidden initially, shown when category selected) -->
+    <section id="gallery-images" class="hidden py-16">
+      <div class="container mx-auto px-4"></div>
+    </section>
+  </main>
+
+  <!-- Lightbox modal -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:opacity-80 z-10">×</button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:opacity-80 z-10">‹</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain cursor-default" />
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:opacity-80 z-10">›</button>
+  </div>
+
+  <!-- Video lightbox modal -->
+  <div id="gallery-video-lightbox" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4">
+    <button id="video-lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:opacity-80 z-10 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center">×</button>
+    <div class="w-full max-w-4xl aspect-video relative" onclick="event.stopPropagation()">
+      <video id="video-lightbox-player" controls class="w-full h-full rounded-lg" playsinline></video>
+    </div>
+    <div id="video-lightbox-nav" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <button id="video-lightbox-prev" class="btn btn-sm btn-ghost text-white">‹ Prev</button>
+      <span id="video-lightbox-counter" class="text-white self-center px-2 text-sm"></span>
+      <button id="video-lightbox-next" class="btn btn-sm btn-ghost text-white">Next ›</button>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

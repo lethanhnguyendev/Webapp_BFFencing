@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #026ca6;
+  --color-primary-content: #ffffff;
+  --color-secondary: #026ca6;
+  --color-secondary-content: #ffffff;
+  --color-base-content: #0e121d;
+}
+
+/* Bright white background theme */
+body {
+  background-color: #ffffff;
+  color: #0e121d;
+}
+
+/* Carousel slides - JS controls opacity for transitions */
+.carousel-slide {
+  transition: opacity 1s ease-in-out;
+}
+/* Hidden slides must not block clicks - allow pointer events to pass through */
+.carousel-slide.opacity-0 {
+  pointer-events: none;
+}
